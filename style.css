@@ -1,0 +1,129 @@
+@charset "UTF-8";
+@font-face{
+    font-family: font1 ;
+    src: url(fontes/manga_temple/mangat.ttf)
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    background: #081F21 ;
+
+}
+
+.container{
+
+    height: 460px;
+    width: 800px;
+    overflow: hidden;  /*QUANDO A TELA É MUITO GRANDE ELE ADICIONA A OPÇAO DE ROLAGEM DA TELA */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.imagem img{
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+
+}
+
+.navegacao{
+     position: absolute; /* posição em relação ao container */
+     bottom: 20px; /* Distância a partir da base */
+     left: 50%; /* Distância a partir da esquerda */
+     transform: translate(-50%); /* Altera o eixo principal */
+     display: flex; /* Colocar o conteúdo lado a lado */
+}
+
+.bar {
+    background-color: black; /* Plano de Fundo indicador  */
+    width: 30px; /* Largura do indicador */
+    height: 5px; /* Altura do indicador */
+    margin: 6px; /* Espaço entre os indicadores */
+    transition: 1s; /* Transição do houver */
+    cursor: pointer; /* Ponteiro do mouse */
+   
+
+}
+
+.bar:hover{
+    background: rgb(197, 109, 0);
+}
+
+input{
+    display: none;
+}
+
+.imagens{
+    display: flex;
+    width: 600%;
+    height: 100%;
+}
+
+.imagem{
+    width: 16.6666666667%;
+    transition: 0.5s;
+}
+.imagem img{
+    height: 100%;
+    width: 100%;
+}
+
+#imagem1:checked  ~ .img1{
+    margin-left: 0;
+}
+
+#imagem2:checked  ~ .img1{
+    margin-left: -16.6666666667%;
+}
+
+#imagem3:checked ~ .img1{
+    margin-left: -33.3333333333%;
+
+}
+
+#imagem4:checked ~ .img1{
+    margin-left: -50%;
+}
+
+#imagem5:checked ~ .img1{
+    margin-left: -66.6666666667%;
+}
+
+#imagem6:checked ~ .img1{
+    margin-left: -83.3333333333%;
+}
+
+@font-face{
+    font-family: font2 ;
+    src: url(fontes/minecrafter/Minecrafter.Alt.ttf);
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: font2;
+    color: #3a706c;
+
+}
+
+
+
+h1{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    color: #47948D;
+   
+}
+h1{
+    font-family: font1;
+}
+
